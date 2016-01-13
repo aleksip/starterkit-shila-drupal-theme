@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="{{ htmlClass }}">
+  <head>
+    <title>{{ title }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <!-- From Drupal core -->
+    <link rel="stylesheet" href="../../css/normalize.css?{{ cacheBuster }}" media="all" />
+    <link rel="stylesheet" href="../../css/hidden.module.css?{{ cacheBuster }}" media="all" />
+    <!-- Shila Drupal theme CSS -->
+    <link rel="stylesheet" href="../../css/base.css?{{ cacheBuster }}" media="all" />
+    <link rel="stylesheet" href="../../css/layout.css?{{ cacheBuster }}" media="all" />
+    <link rel="stylesheet" href="../../css/components.css?{{ cacheBuster }}" media="all" />
+    <link rel="stylesheet" href="../../css/state.css?{{ cacheBuster }}" media="all" />
+    <link rel="stylesheet" href="../../css/theme.css?{{ cacheBuster }}" media="all" />
+    <link rel="stylesheet" href="../../css/print.css?{{ cacheBuster }}" media="all" />
+  </head>
+  <body class="{{ bodyClass }}">
+    <div class="layout-container">
+        <input id="off-canvas-checkbox" type="checkbox">
+        <label for="off-canvas-checkbox" id="off-canvas-label" onclick=""></label>
+      <div class="page{% block is_front %}{% endblock %}">
+          <header role="banner" class="header page__header">
+            {% block page__header %}
+              {% include "molecules-block--system-branding-block.html" with {"site_slogan": ""} %}
+            {% endblock %}
+          </header>
+        <div class="page__middle">
+            <main role="main" class="{{ main_classes }}">
+              <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+              {% block page__middle %}{% endblock %}
+            </main>
+        </div>
+          <footer role="contentinfo" class="footer page__footer">
+            {% block page__footer %}{% endblock %}
+          </footer>
+      </div>
+        <div class="off-canvas">
+          {% block off_canvas %}
+            {% include "molecules-block--system-menu-block.html" %}
+          {% endblock %}
+        </div>
+    </div>{# /.layout-container #}
+  </body>
+</html>

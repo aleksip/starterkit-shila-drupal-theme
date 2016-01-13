@@ -1,0 +1,43 @@
+{
+    "name": "aleksip/starterkit-shila-drupal-theme",
+    "description": "Shila Drupal Theme StarterKit for Pattern Lab.",
+    "keywords": ["drupal", "pattern lab", "starterkit", "theme", "twig"],
+    "homepage": "https://github.com/aleksip/starterkit-shila-drupal-theme",
+    "license": "GPL-2.0",
+    "type": "patternlab-starterkit",
+    "authors": [
+        {
+            "name": "Aleksi Peebles"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/aleksip/starterkit-shila-drupal-theme/issues",
+        "source": "https://github.com/aleksip/starterkit-shila-drupal-theme/releases"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/aleksip/patternlab-php-core"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/aleksip/patternengine-php-twig"
+        }
+    ],
+    "require": {
+        "pattern-lab/core": "dev-shila-drupal-theme",
+        "pattern-lab/patternengine-twig": "dev-shila-drupal-theme",
+        "twig/twig": "1.*",
+        "aleksip/plugin-data-transform": "dev-master"
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "patternlab": {
+            "dist": {
+                "sourceDir": [
+                    { "*": "*" }
+                ]
+            }
+        }
+    }
+}
