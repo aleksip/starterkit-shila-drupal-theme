@@ -1,7 +1,7 @@
 {
     "attributes": {
         "Attribute()": {
-            "class": ["block", "block--branding"]
+            "class": ["block", "block--system-messages"]
         }
     },
     "title_attributes": {
@@ -9,5 +9,5 @@
             "class": ["block__title"]
         }
     },
-    "site_name": "Site name"
+    "content": "molecules-status-messages.html"
 }

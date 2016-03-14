@@ -20,24 +20,18 @@
       <input id="off-canvas-checkbox" type="checkbox">
       <label for="off-canvas-checkbox" id="off-canvas-label" onclick=""></label>
       <div class="page{% block is_front %}{% endblock %}">
-        <header role="banner" class="header page__header">
-          <div class="region region--header">
-            {% block page__header %}
-              {% include "molecules-block--system-branding-block.html" with {"site_slogan": ""} %}
-            {% endblock %}
-          </div>
-        </header>
+        {% block page__header %}
+          {% include "organisms-header" %}
+        {% endblock %}
         <main role="main" class="main page__content">
           <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
           <div class="region region--content">
             {% block page__content %}{% endblock %}
           </div>
         </main>
-        <footer role="contentinfo" class="footer page__footer">
-          <div class="region region--footer">
-            {% block page__footer %}{% endblock %}
-          </div>
-        </footer>
+        {% block page__footer %}
+          {% include "organisms-footer" %}
+        {% endblock %}
       </div>
       <div class="off-canvas">
         <div class="region region--off_canvas">
