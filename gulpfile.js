@@ -8,6 +8,7 @@ var sass        = require('gulp-sass');
 var sourcemaps  = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
 var fs          = require('fs');
+var flatten     = require('gulp-flatten');
 
 function isDirectory(dir) {
     try {
@@ -30,7 +31,7 @@ gulp.task('watch', ['sass-change'], function() {
         }
     });
     gulp.watch(config.sass.srcFiles, ['sass-change']);
-    gulp.watch(config.patternFiles, ['patterns-change']);
+    gulp.watch(config.patternsDir + '/**/*', ['patterns-change']);
     gulp.watch(config.imageFiles, ['drupal:copy-images']);
     if (isDirectory(config.drupal.templatesDir)) {
         gulp.watch(
@@ -77,7 +78,8 @@ gulp.task('drupal:copy-css', function() {
 
 gulp.task('drupal:copy-patterns', function() {
     if (isDirectory(config.drupal.patternsDir)) {
-        gulp.src(config.patternFiles)
+        gulp.src(config.patternsDir + '/**/*.html.twig')
+            .pipe(flatten())
             .pipe(gulp.dest(config.drupal.patternsDir))
         ;
     }

@@ -16,7 +16,7 @@
         },
         "destDir": "./dist/css"
     },
-    "patternFiles": "./dist/_patterns/**/*",
+    "patternsDir": "./dist/_patterns",
     "imageFiles": "./dist/images/**/*",
     "patternLab": {
         "dir": "../pattern-lab"
@@ -24,7 +24,7 @@
     "drupal": {
         "cssDir": "../css",
         "imagesDir": "../images",
-        "patternsDir": "../templates/_patterns",
+        "patternsDir": "../templates/patterns",
         "templatesDir": "../templates"
     },
     "drush": {
