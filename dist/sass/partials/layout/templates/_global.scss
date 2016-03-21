@@ -15,4 +15,4 @@
   @extend %outer-container;
   padding-top: 4rem;
 }
-@include listing-multicol-breakpoint-layout((1 2 3 3));
+@include list-multicol-breakpoint-layout((1 2 3 3));

@@ -1,12 +1,12 @@
 /**
  * @file
- * sass/partials/components/molecules/components/_listing-item.scss
+ * sass/partials/components/molecules/components/_list-item.scss
  */
 
-.listing-item {
+.list-item {
   @extend %clearfix;
 }
-.listing-item__body {
+.list-item__body {
   .field--node_title h2,
   .field--node_title h3 {
     margin-top: 0
@@ -23,13 +23,13 @@
     margin-bottom: 0;
   }
 }
-@include listing-item-layout($xs-cols, 'top-down');
+@include list-item-layout($xs-cols, 'top-down');
 @include breakpoint($s-break) {
-  @include listing-item-layout($s-cols, 'left-right');
+  @include list-item-layout($s-cols, 'left-right');
 }
 @include breakpoint($m-break) {
-  @include listing-item-layout($m-cols, 'left-right');
+  @include list-item-layout($m-cols, 'left-right');
 }
 @include breakpoint($l-break) {
-  @include listing-item-layout($l-cols, 'left-right');
+  @include list-item-layout($l-cols, 'left-right');
 }
