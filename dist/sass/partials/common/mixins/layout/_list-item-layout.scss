@@ -10,7 +10,7 @@
   .list-item {
     @include layout(4) {
       @if ($layout-type == 'left-right') {
-        .list-item__picture {
+        .list-item__image {
           @include grid-span(1, 1, $gutter: $scaled-gutter);
         }
         .list-item__body {
@@ -18,7 +18,7 @@
         }
       }
       @else {
-        .list-item__picture {
+        .list-item__image {
           @include grid-span(4, 1, $gutter: $scaled-gutter);
           margin-bottom: $small-spacing;
         }
