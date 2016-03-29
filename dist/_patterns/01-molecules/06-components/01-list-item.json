@@ -1,4 +1,6 @@
 {
+    "title": "molecules-field--node_title",
+    "body": "molecules-field--node_body",
     "links": {
         "include()": {
             "pattern": "molecules-links.html",
