@@ -12,16 +12,16 @@
   @include breakpoint($xs-break) {
     box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
   }
-  .block--branding {
-    float: left;
-  }
-  .nav--main {
+  .nav {
+    @extend %horizontal-nav;
     display: none;
   }
+  .nav--main {
+    padding-top: 0.92rem;
+  }
   @include breakpoint($s-break) {
-    .nav--main {
+    .nav {
       display: block;
-      padding: 0.83rem 0;
     }
   }
 }

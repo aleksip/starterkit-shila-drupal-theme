@@ -19,3 +19,26 @@
     display: table;
   }
 }
+%horizontal-nav {
+  ul {
+    margin-top: 0;
+    width: 100%;
+    text-align: center;
+  }
+  li {
+    display: inline-block;
+    padding-left: $small-spacing;
+  }
+  a {
+    color: $medium-gray;
+    text-decoration: none;
+    &:active,
+    &:focus,
+    &:hover {
+      color: $dark-gray;
+    }
+  }
+  .is-active {
+    color: $dark-gray;
+  }
+}
