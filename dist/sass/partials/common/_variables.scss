@@ -35,6 +35,7 @@ $heading-line-height: 1.2;
 $base-border-radius: 3px;
 $base-spacing: $base-line-height * 1em;
 $small-spacing: $base-spacing / 2;
+$large-spacing: $base-spacing * 2;
 $base-z-index: 0;
 $side-margin: 10;
 $max-width: 32rem;
@@ -66,8 +67,3 @@ $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $l
 // Animations
 $base-duration: 150ms;
 $base-timing: ease;
-
-// Off canvas
-$off-canvas-in-use: true;
-$off-canvas-not-in-use: false;
-$off-canvas-header-height: 4rem;
