@@ -14,7 +14,7 @@ $off-canvas-not-in-use: $s-break !default;
 $off-canvas-width: (80% 20rem 20rem 20rem) !default;
 $off-canvas-header-height: 64px !default;
 $off-canvas-z-index: 500 !default;
-$off-canvas-side: left !default;
+$off-canvas-side: right !default;
 
 @mixin off-canvas-in-use-rules() {
   .layout-container {
