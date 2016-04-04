@@ -25,7 +25,7 @@ gulp.task('watch', ['sass-change'], function() {
             target: "localhost:8080",
             reqHeaders: function(config) {
                 return {
-                    "host": "www.aleksip.dev"
+                    "host": "www.shila.dev"
                 }
             }
         }
