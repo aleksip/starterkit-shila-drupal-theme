@@ -6,13 +6,12 @@
  */
 
 .page--front {
-  padding-bottom: 1rem;
   .comment-add {
     display: none;
   }
 }
 .view--frontpage {
   .views-row + .views-row {
-    margin-top: 4rem;
+    margin-top: $large-spacing;
   }
 }

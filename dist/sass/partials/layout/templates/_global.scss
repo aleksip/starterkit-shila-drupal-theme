@@ -5,14 +5,21 @@
  * @see page.html.twig
  */
 
-.page {
-  padding-bottom: 4rem;
+.layout-container,
+.page,
+.page__header,
+.page__content,
+.page__footer {
+  @extend %clearfix;
+}
+.region--header,
+.region--content,
+.region--footer {
+  @extend %outer-container;
 }
 .page__content {
   @extend %side-paddings;
-}
-.region--content {
-  @extend %outer-container;
-  padding-top: 4rem;
+  padding-top: $large-spacing;
+  margin-bottom: $large-spacing;
 }
 @include list-multicol-breakpoint-layout((1 2 3 3));

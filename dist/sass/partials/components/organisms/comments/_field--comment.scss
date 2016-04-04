@@ -6,12 +6,12 @@
  */
 
 .field--comment {
-  margin-top: 4rem;
+  margin-top: $large-spacing;
   .comment + .comment {
-    margin-top: 4rem;
+    margin-top: $large-spacing;
   }
   .indented {
-    padding-left: 1rem;
+    padding-left: $base-spacing;
   }
 }
 .field--comment__title {

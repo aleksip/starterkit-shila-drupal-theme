@@ -7,10 +7,21 @@
 
 .page__header {
   @extend %side-paddings;
-  padding-left: 64px;
   width: 100%;
   background-color: $base-background-color;
+  @include breakpoint($xs-break) {
+    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
+  }
   .block--branding {
-    @extend %outer-container;
+    float: left;
+  }
+  .nav--main {
+    display: none;
+  }
+  @include breakpoint($s-break) {
+    .nav--main {
+      display: block;
+      padding: 0.83rem 0;
+    }
   }
 }

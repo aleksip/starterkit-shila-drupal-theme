@@ -7,8 +7,5 @@
 
 .page__footer {
   @extend %side-paddings;
-  padding-top: 4rem;
-  .block {
-    @extend %outer-container;
-  }
+  padding-bottom: $base-spacing;
 }
