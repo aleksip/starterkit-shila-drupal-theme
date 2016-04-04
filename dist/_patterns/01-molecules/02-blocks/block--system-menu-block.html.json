@@ -1,8 +1,12 @@
 {
     "attributes": {
         "Attribute()": {
-            "class": ["nav", "nav--main"]
+            "class": ["nav"]
         }
+    },
+    "configuration": {
+        "label_display": true,
+        "label": "Menu Block Title"
     },
     "title_attributes": {
         "Attribute()": {
