@@ -37,13 +37,9 @@
           {% include "organisms-footer" %}
         {% endblock %}
       </div>
-      <div class="off-canvas">
-        <div class="region region--off_canvas">
-          {% block off_canvas %}
-            {% include "molecules-block--system-menu-block.html" %}
-          {% endblock %}
-        </div>
-      </div>
+      {% block off_canvas %}
+        {% include "organisms-off-canvas" %}
+      {% endblock %}
     </div>{# /.layout-container #}
   </body>
 </html>
