@@ -1,6 +1,6 @@
 # Shila Drupal Theme StarterKit
 
-A StarterKit for the [Twig Edition of Pattern Lab](https://github.com/pattern-lab/edition-php-twig-standard). Used in developing Drupal 8 themes and Pattern Lab style guides based on [Shila theme](https://github.com/aleksip/shila-drupal-theme). At the moment a forked version of Pattern Lab is required for Drupal template compatibility.
+A StarterKit for the [Drupal Edition of Pattern Lab](https://github.com/pattern-lab/edition-php-drupal-standard). Used in developing Drupal 8 themes and Pattern Lab style guides based on [Shila theme](https://github.com/aleksip/shila-drupal-theme).
 
 Tries to follow [Drupal CSS coding standards](https://www.drupal.org/coding-standards/css).
 
