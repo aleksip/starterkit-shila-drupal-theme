@@ -1,5 +1,4 @@
 {
-    "block_main_navigation": "molecules-block-main-navigation",
     "block_second_level_navigation": {
         "include()": {
             "pattern": "molecules-block--system-menu-block.html",
@@ -12,7 +11,7 @@
     },
     "block_page_title": {
         "include()": {
-            "pattern": "molecules-block-page-title",
+            "pattern": "molecules-block--page-title",
             "with": {
                 "content": {
                     "include()": {
@@ -27,7 +26,7 @@
     },
     "block_main": {
         "include()": {
-            "pattern": "organisms-block-main",
+            "pattern": "organisms-block--main",
             "with": {
                 "content": "organisms-page-full"
             }
