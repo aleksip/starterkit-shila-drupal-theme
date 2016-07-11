@@ -15,11 +15,6 @@
                             "include()": {
                                 "pattern": "atoms-form-element-label.html",
                                 "with": {
-                                    "attributes": {
-                                        "Attribute()": {
-                                            "class": []
-                                        }
-                                    },
                                     "title_display": "invisible",
                                     "title": "Search"
                                 }

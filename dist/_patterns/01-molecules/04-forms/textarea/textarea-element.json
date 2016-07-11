@@ -2,11 +2,6 @@
     "type": "textarea",
     "name": "name",
     "title_display": "before",
-    "attributes": {
-        "Attribute()": {
-            "class": []
-        }
-    },
     "label_display": "before",
     "label": {
         "include()": {
