@@ -42,7 +42,7 @@ $off-canvas-side: right !default;
     background-image: url('../images/menu.png');
     background-image: url('../images/menu.svg');
     cursor: pointer;
-    @extend %off-canvas-slide;
+    @include off-canvas-slide;
   }
   .off-canvas {
     display: block;
@@ -50,7 +50,7 @@ $off-canvas-side: right !default;
     min-height: 100%;
     overflow: hidden;
     overflow-y: auto;
-    @extend %off-canvas-slide;
+    @include off-canvas-slide;
     @for $i from 1 through 4 {
       @include breakpoint(nth($breaks-list, $i)) {
         #{$off-canvas-side}: -(nth($off-canvas-width, $i));
@@ -67,7 +67,7 @@ $off-canvas-side: right !default;
     width: 100%;
     height: auto;
     overflow: visible;
-    @extend %off-canvas-slide;
+    @include off-canvas-slide;
   }
   .page__header {
     position: fixed;
@@ -116,7 +116,7 @@ $off-canvas-side: right !default;
   }
 }
 
-%off-canvas-slide {
+@mixin off-canvas-slide {
   @include transition-property($off-canvas-side);
   @include transition-duration(.4s);
 }
