@@ -14,21 +14,9 @@
         "issues": "https://github.com/aleksip/starterkit-shila-drupal-theme/issues",
         "source": "https://github.com/aleksip/starterkit-shila-drupal-theme/releases"
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/aleksip/patternlab-php-core"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/aleksip/patternengine-php-twig"
-        }
-    ],
     "require": {
-        "pattern-lab/core": "dev-shila-drupal-theme",
-        "pattern-lab/patternengine-twig": "dev-shila-drupal-theme",
-        "twig/twig": "1.*",
-        "aleksip/plugin-data-transform": "dev-master"
+        "pattern-lab/edition-drupal-standard": "^2.0.0",
+        "aleksip/plugin-data-transform": "^1.0.0"
     },
     "minimum-stability": "dev",
     "extra": {
