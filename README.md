@@ -6,27 +6,23 @@ Tries to follow [Drupal CSS coding standards](https://www.drupal.org/coding-stan
 
 A Pattern Lab generated style guide can be found [here](https://aleksip.github.io/styleguide-shila-drupal-theme/) (online style guide might not be up to date).
 
-Please note that this StarterKit is in early stages of development.
-
 
 ## Development tools, libraries and frameworks used
 
 - [libSass](http://sass-lang.com/libsass) Sass engine
 - [Singularity](http://singularity.gs/) grid framework
 - [Bourbon](http://bourbon.io/) mixin library
-- [Bower](http://bower.io/) package manager
 - [Gulp](http://gulpjs.com/) toolkit
 
 
 ## Installing development dependencies
 
-Prerequisites: [npm](https://nodejs.org/) and [Bower](http://bower.io/) installed.
+Prerequisites: [npm](https://nodejs.org/) installed.
 
 In the StarterKit root directory run:
  
 ```sh
 npm install
-bower install
 ```
 
 
