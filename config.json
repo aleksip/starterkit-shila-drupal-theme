@@ -4,13 +4,13 @@
         "options": {
             "includePaths": [
                 "./dist/sass",
-                "./bower_components/bourbon/app/assets/stylesheets",
-                "./bower_components/breakpoint-sass/stylesheets",
-                "./bower_components/compass-mixins/lib",
-                "./bower_components/neat/app/assets/stylesheets",
-                "./bower_components/sass-toolkit/stylesheets",
-                "./bower_components/sassy-maps/sass",
-                "./bower_components/singularity/stylesheets"
+                "./node_modules/bourbon/app/assets/stylesheets",
+                "./node_modules/breakpoint-sass/stylesheets",
+                "./node_modules/compass-mixins/lib",
+                "./node_modules/neat/app/assets/stylesheets",
+                "./node_modules/sass-toolkit/stylesheets",
+                "./node_modules/sassy-maps/sass",
+                "./node_modules/singularitygs/stylesheets"
             ],
             "outputStyle": "expanded"
         },
