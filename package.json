@@ -9,7 +9,6 @@
     "browser-sync": "^2.10.0",
     "compass-mixins": "^0.12.10",
     "gulp": "^3.9.0",
-    "gulp-flatten": "^0.2.0",
     "gulp-run": "1.6.10",
     "gulp-sass": "^2.1.1",
     "gulp-sass-lint": "^1.2.0",

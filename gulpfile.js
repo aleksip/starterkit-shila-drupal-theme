@@ -55,7 +55,6 @@ var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
 var fs = require('fs');
-var flatten = require('gulp-flatten');
 var sassLint = require('gulp-sass-lint');
 
 // Helper functions.
