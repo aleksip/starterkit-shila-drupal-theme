@@ -56,6 +56,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
 var fs = require('fs');
 var flatten = require('gulp-flatten');
+var sassLint = require('gulp-sass-lint');
 
 // Helper functions.
 
@@ -186,6 +187,15 @@ gulp.task('drush:cr', function () {
  */
 gulp.task('bs:reload', function () {
   browserSync.reload();
+});
+
+/**
+ * Lints Sass files.
+ */
+gulp.task('lint:sass', function () {
+  return gulp.src(config.sass.srcFiles)
+    .pipe(sassLint())
+    .pipe(sassLint.format());
 });
 
 /**
