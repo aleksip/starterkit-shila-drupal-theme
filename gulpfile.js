@@ -83,7 +83,6 @@ gulp.task('watch', ['sass-change'], function () {
   });
   gulp.watch(config.sass.srcFiles, ['sass-change']);
   gulp.watch(config.patternsDir + '/**/*.twig', ['patterns-change']);
-  gulp.watch(config.imageFiles, ['drupal:copy-images']);
 });
 
 /**
@@ -102,14 +101,14 @@ gulp.task('sass', function () {
  * Task sequence to run when Sass files have changed.
  */
 gulp.task('sass-change', function () {
-  runSequence('sass', 'drupal:copy-css', 'pl:generate');
+  runSequence('sass', 'pl:generate');
 });
 
 /**
  * Task sequence to run when StarterKit pattern files have changed.
  */
 gulp.task('patterns-change', function () {
-  runSequence('drupal:copy-patterns', 'pl:generate');
+  runSequence('pl:generate');
 });
 
 /**
@@ -118,53 +117,6 @@ gulp.task('patterns-change', function () {
 gulp.task('templates-change', function () {
   runSequence('drush:cr', 'bs:reload');
 });
-
-/**
- * Copies CSS files from StarterKit to Drupal theme.
- */
-gulp.task('drupal:copy-css', function () {
-  if (isDirectory(config.drupal.cssDir)) {
-    gulp.src([
-      config.sass.destDir + '/**/*',
-      '!' + config.sass.destDir + '/hidden.module.css',
-      '!' + config.sass.destDir + '/normalize.css'
-    ])
-      .pipe(gulp.dest(config.drupal.cssDir))
-      .pipe(browserSync.stream())
-    ;
-  }
-  return;
-});
-
-/**
- * Copies pattern files from StarterKit to Drupal theme.
- */
-gulp.task('drupal:copy-patterns', function () {
-  if (isDirectory(config.drupal.patternsDir)) {
-    gulp.src(config.patternsDir + '/**/*.html.twig')
-      .pipe(flatten())
-      .pipe(gulp.dest(config.drupal.patternsDir))
-    ;
-  }
-  return;
-});
-
-/**
- * Copies image files from StarterKit to Drupal theme.
- */
-gulp.task('drupal:copy-images', function () {
-  if (isDirectory(config.drupal.imagesDir)) {
-    gulp.src(config.imageFiles)
-      .pipe(gulp.dest(config.drupal.imagesDir))
-    ;
-  }
-  return;
-});
-
-/**
- * Task sequence to copy all StarterKit files used in Drupal theme to Drupal theme.
- */
-gulp.task('drupal:copy', ['drupal:copy-css', 'drupal:copy-patterns', 'drupal:copy-images']);
 
 /**
  * Generates Pattern Lab front-end.
