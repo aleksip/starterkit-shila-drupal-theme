@@ -16,8 +16,7 @@
         .list-item__body {
           @include grid-span(3, 2, $gutter: $scaled-gutter);
         }
-      }
-      @else {
+      } @else {
         .list-item__image {
           @include grid-span(4, 1, $gutter: $scaled-gutter);
           margin-bottom: $small-spacing;

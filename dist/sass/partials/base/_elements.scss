@@ -3,7 +3,9 @@
  * sass/partials/base/_elements.scss
  */
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 html {

@@ -11,8 +11,8 @@
 }
 .block--local-tasks__primary,
 .block--local-tasks__secondary {
-  clear: both;
   @include horizontal-list(0.5em);
+  clear: both;
 }
 .block--local-tasks__task .is-active {
   color: shade($action-color, 25%);

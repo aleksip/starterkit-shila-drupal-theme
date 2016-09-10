@@ -16,8 +16,8 @@
   font-size: smaller;
 }
 .node__links {
-  font-family: $base-font-family;
   @include horizontal-list(0.5em);
+  font-family: $base-font-family;
 }
 .node.teaser {
   .node__title {

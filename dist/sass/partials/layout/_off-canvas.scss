@@ -16,7 +16,7 @@ $off-canvas-header-height: 64px !default;
 $off-canvas-z-index: 500 !default;
 $off-canvas-side: right !default;
 
-@mixin off-canvas-in-use-rules() {
+@mixin off-canvas-in-use-rules {
   .layout-container {
     width: 100%;
     height: 100%;
@@ -29,6 +29,7 @@ $off-canvas-side: right !default;
     left: -9999px;
   }
   #off-canvas-label {
+    @include off-canvas-slide;
     display: block;
     position: fixed;
     #{$off-canvas-side}: 0;
@@ -42,15 +43,14 @@ $off-canvas-side: right !default;
     background-image: url('../images/menu.png');
     background-image: url('../images/menu.svg');
     cursor: pointer;
-    @include off-canvas-slide;
   }
   .off-canvas {
+    @include off-canvas-slide;
     display: block;
     position: fixed;
     min-height: 100%;
     overflow: hidden;
     overflow-y: auto;
-    @include off-canvas-slide;
     @for $i from 1 through 4 {
       @include breakpoint(nth($breaks-list, $i)) {
         #{$off-canvas-side}: -(nth($off-canvas-width, $i));
@@ -62,12 +62,12 @@ $off-canvas-side: right !default;
     display: none;
   }
   .page {
+    @include off-canvas-slide;
     position: absolute;
     #{$off-canvas-side}: 0;
     width: 100%;
     height: auto;
     overflow: visible;
-    @include off-canvas-slide;
   }
   .page__header {
     position: fixed;
@@ -105,7 +105,7 @@ $off-canvas-side: right !default;
   }
 }
 
-@mixin off-canvas-not-in-use-rules() {
+@mixin off-canvas-not-in-use-rules {
   #off-canvas-checkbox,
   #off-canvas-label,
   .off-canvas {
@@ -123,24 +123,21 @@ $off-canvas-side: right !default;
 
 @if $off-canvas-not-in-use {
   @if $off-canvas-not-in-use == true {
-    @include off-canvas-not-in-use-rules();
-  }
-  @else {
+    @include off-canvas-not-in-use-rules;
+  } @else {
     @include breakpoint($off-canvas-not-in-use) {
-      @include off-canvas-not-in-use-rules();
+      @include off-canvas-not-in-use-rules;
     }
   }
-}
-@else {
-  @include off-canvas-not-in-use-rules();
+} @else {
+  @include off-canvas-not-in-use-rules;
 }
 @if $off-canvas-in-use {
   @if $off-canvas-in-use == true {
-    @include off-canvas-in-use-rules();
-  }
-  @else if $off-canvas-in-use != false {
+    @include off-canvas-in-use-rules;
+  } @else if $off-canvas-in-use != false {
     @include breakpoint($off-canvas-in-use) {
-      @include off-canvas-in-use-rules();
+      @include off-canvas-in-use-rules;
     }
   }
 }
