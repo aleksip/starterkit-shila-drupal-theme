@@ -106,7 +106,7 @@ gulp.task('sass-change', function () {
  * Task sequence to run when StarterKit pattern files have changed.
  */
 gulp.task('patterns-change', function () {
-  runSequence('pl:generate');
+  runSequence('pl:generate', 'bs-reload');
 });
 
 /**
