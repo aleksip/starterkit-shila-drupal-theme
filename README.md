@@ -1,3 +1,6 @@
+**PLEASE NOTE: this StarterKit has now been merged into [Shila theme](https://github.com/aleksip/shila-drupal-theme) and development will continue as part of that project.**
+
+
 # Shila Drupal Theme StarterKit
 
 A StarterKit for the [Drupal Edition of Pattern Lab](https://github.com/pattern-lab/edition-php-drupal-standard). Used in developing Drupal 8 themes and Pattern Lab style guides based on [Shila theme](https://github.com/aleksip/shila-drupal-theme).
